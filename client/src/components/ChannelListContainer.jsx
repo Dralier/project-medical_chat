@@ -40,12 +40,13 @@ const ChannelListContainer = () => {
                     List={(listProps) => (
                         <TeamChannelList 
                             {...listProps}
-                            // type="messaging"
-                            // isCreating={isCreating}
-                            // setIsCreating={setIsCreating}
-                            // setCreateType={setCreateType} 
-                            // setIsEditing={setIsEditing}
-                            // setToggleContainer={setToggleContainer}
+                            type="team"
+                        />
+                    )}
+                    Preview={(previewProps)=>(
+                        <TeamChannelPreview
+                            {...previewProps}
+                            type="team"
                         />
                     )}
                 />
