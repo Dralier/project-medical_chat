@@ -17,7 +17,9 @@ const Auth = () => {
     const [form, setForm] = useState(initialState)
     const [isSignup, setIsSignup] = useState(true);
 
-    const handleChange = () => {};
+    const handleChange = (e) => {
+        setForm({...form, [e.target.name] : e.target.value});
+    };
     const switchMode = () => {
         setIsSignup((prevIsSignup)=>!prevIsSignup )
     };
@@ -95,7 +97,10 @@ const Auth = () => {
                             required
                             />
                             </div>
-                        )}   
+                        )} 
+                        <div className="auth__form-container_fields-content_button">
+                            <button>{isSignup ? "Sign Up" : "Sign In"}</button>
+                        </div>  
                     </form>
                     <div className="auth__form-container_fields-account">
                         <p>{isSignup ? "Already have an account?":"Don't have an account?"}</p>
