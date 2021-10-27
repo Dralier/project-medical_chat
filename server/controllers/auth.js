@@ -17,7 +17,7 @@ const signup = (req, res) => {
     try {
         const { fullName, username, password, phoneNumber } = req.body;
 
-        const userId = crypto
+        const userId = crypto.randomBytes()
     } catch (error) {
         console.log(error)
         res.status(500).json({ message: error });
